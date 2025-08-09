@@ -1,0 +1,58 @@
+problem 
+read -- understand -- ideate -- implement -- debug -- accepted 
+
+what is correctness of your ideate part ?
+efficency of your ideate part ? 
+
+
+time complexity 
+means number of elementary instruction it takes
+
+best case complexity
+average case complexity
+worst case complexity
+
+
+memory complexity 
+
+
+
+
+
+1)
+time complexity for this 
+
+
+
+int count = 0 ; 
+for ( int i =0 ; i<N ; i++){
+    for(int j=0 ; j<i; j++){
+        count++:
+
+    }
+}
+
+
+Big O Notation 
+
+Big O Notation is a mathematical way to describe how the running time or space 
+requirements of an algorithm grow as the input size increases.
+
+Key Points:
+It focuses on the term that grows the fastest as the input size (N) increases.
+It ignores constants and lower-order terms because they become insignificant 
+for large inputs.
+It helps compare the efficiency of algorithms, especially for large datasets.
+Example:
+If an algorithm takes N² + 5N + 10 steps, Big O notation expresses this as O(N²), 
+because N² dominates as N gets large.
+
+Common Big O Classes:
+O(1): Constant time (does not depend on input size)
+O(log N): Logarithmic time
+O(N): Linear time
+O(N²): Quadratic time
+O(2^N): Exponential time
+Big O gives a high-level understanding of algorithm performance and scalability. 
+
+
