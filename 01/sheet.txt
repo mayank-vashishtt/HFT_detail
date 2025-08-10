@@ -13,13 +13,6 @@ best case complexity
 average case complexity
 worst case complexity
 
-
-memory complexity 
-
-
-
-
-
 1)
 time complexity for this 
 
@@ -165,3 +158,94 @@ Check the maximum input size (N) in the problem.
 Calculate the number of operations for your approach.
 Compare with what a computer can handle (about 10⁸ operations per second).
 If it fits, start coding. If not, optimize your approach.
+
+
+
+Amortization in algorithms is a technique to analyze the average time per
+operation over a sequence of operations, even if some operations are expensive.
+
+
+Memory complexity 
+Memory complexity (also called space complexity) measures the amount of 
+memory an algorithm or program needs to run, as a function of the input size.
+
+Key Points:
+- It includes memory for variables, data structures, function call stack, and 
+any extra space used by the algorithm.
+- Like time complexity, it is usually expressed in Big O notation 
+(e.g., O(1), O(N), O(N²)).
+
+
+Example 1: Constant Space (O(1))
+```cpp
+int sum = 0;
+for (int i = 0; i < N; i++) {
+    sum += arr[i];
+}
+```
+Here, only a few variables are used, so memory complexity is O(1).
+
+Example 2: Linear Space (O(N))
+```cpp
+int* copy = new int[N];
+for (int i = 0; i < N; i++) {
+    copy[i] = arr[i];
+}
+```
+Here, an extra array of size N is used, so memory complexity is O(N).
+
+Example 3: Quadratic Space (O(N²))
+```cpp
+int** matrix = new int*[N];
+for (int i = 0; i < N; i++) {
+    matrix[i] = new int[N];
+}
+```
+Here, a 2D array of size N×N is used, so memory complexity is O(N²).
+
+### Common Data Types and Their Sizes
+| Data Type | Typical Size (bytes) | Size (bits) |
+|-----------|----------------------|-------------|
+| bool      | 1                    | 8           |
+| char      | 1                    | 8           |
+| int       | 4                    | 32          |
+| float     | 4                    | 32          |
+| double    | 8                    | 64          |
+| long      | 8                    | 64          |
+| pointer   | 8 (on 64-bit system) | 64          |
+
+Note: Sizes can vary by language and system, but these are common values 
+for C++/Java on modern 64-bit systems.*
+
+Summary
+- Memory complexity helps you understand how much space your 
+solution will use as the input grows.
+- Always consider both time and memory complexity 
+when designing algorithms, especially for large inputs.
+
+
+
+what is NP-HARD problems ?
+
+NP-Hard problems are problems that are very hard to solve quickly 
+(no fast algorithm is known).
+
+Simple Explanation:
+- If you can solve an NP-Hard problem fast, you can solve all problems in NP fast too.
+- But, for NP-Hard problems, even checking if a solution is correct might not be easy.
+- These problems usually take a huge amount of time to solve as the input size grows.
+
+Example of an NP-Hard Problem:**
+Traveling Salesman Problem (TSP):
+- You are given a list of cities and the distances between each pair of cities.
+- The task: Find the shortest possible route that visits every city exactly once and returns to the starting city.
+- For a small number of cities, you can try all possible routes, but as the number of cities increases, the number of possible routes grows extremely fast (factorial growth).
+- No one knows a fast way to solve this for large numbers of cities.
+
+Other Examples:**
+- Knapsack Problem
+- Sudoku (generalized to large boards)
+- Subset Sum Problem
+
+Summary:
+NP-Hard problems are some of the hardest problems in computer science. If you find a fast way to solve one, you can solve many other hard problems fast too!
