@@ -121,3 +121,47 @@ nesting means multiplying
 sequence do addition 
 
 
+Example Problem
+Suppose you have a problem where N can be up to 100,000 (N ≤ 10⁵).
+
+Approach 1: Brute Force (O(N²))
+You write two nested loops, each going up to N.
+For N = 100,000, the number of operations is about 10¹⁰ (100,000 × 100,000).
+Most computers can do about 10⁸ operations per second, so this would take 
+about 100 seconds—too slow!
+Conclusion: O(N²) is not acceptable for N = 10⁵. You should not code this approach.
+
+
+Approach 2: Efficient (O(N log N))
+You find a way to solve the problem using sorting or a data structure, 
+which takes O(N log N) time.
+For N = 100,000, N log N ≈ 100,000 × 17 ≈ 1,700,000 operations.
+This is much less than 10⁸, so it will run in less than a second.
+Conclusion: O(N log N) is acceptable for N = 10⁵. You can code this approach.
+
+
+Read sheet.txt, lines 1 to 100
+
+Let's go deep with an example to show how to check time complexity based on input size and then decide if you can code your solution:
+
+Example Problem
+Suppose you have a problem where N can be up to 100,000 (N ≤ 10⁵).
+
+Approach 1: Brute Force (O(N²))
+You write two nested loops, each going up to N.
+For N = 100,000, the number of operations is about 10¹⁰ (100,000 × 100,000).
+Most computers can do about 10⁸ operations per second, so this would take about 100 seconds—too slow!
+Conclusion: O(N²) is not acceptable for N = 10⁵. You should not code this approach.
+Approach 2: Efficient (O(N log N))
+You find a way to solve the problem using sorting or a data structure, which takes O(N log N) time.
+For N = 100,000, N log N ≈ 100,000 × 17 ≈ 1,700,000 operations.
+This is much less than 10⁸, so it will run in less than a second.
+Conclusion: O(N log N) is acceptable for N = 10⁵. You can code this approach.
+
+
+Steps to Decide:
+Estimate your algorithm’s time complexity.
+Check the maximum input size (N) in the problem.
+Calculate the number of operations for your approach.
+Compare with what a computer can handle (about 10⁸ operations per second).
+If it fits, start coding. If not, optimize your approach.
