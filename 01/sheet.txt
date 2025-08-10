@@ -1,3 +1,4 @@
+
 problem 
 read -- understand -- ideate -- implement -- debug -- accepted 
 
@@ -54,5 +55,69 @@ O(N): Linear time
 O(N²): Quadratic time
 O(2^N): Exponential time
 Big O gives a high-level understanding of algorithm performance and scalability. 
+
+
+
+
+Order Notation 
+O(f(N)) --- 
+theta(f(N))
+omega(f(N))
+Examples:
+
+1. Big O Notation (O(f(N))) – Upper Bound Example:
+    Suppose an algorithm takes at most 5N² + 3N + 10 steps for input size N.
+    We say its time complexity is O(N²), because for large N, the running time will not exceed a constant times N².
+
+2. Theta Notation (θ(f(N))) – Tight Bound Example:
+    Suppose an algorithm always takes exactly 2N + 3 steps for input size N.
+    We say its time complexity is θ(N), because it grows linearly and both the upper and lower bounds are proportional to N.
+
+3. Omega Notation (Ω(f(N))) – Lower Bound Example:
+    Suppose an algorithm takes at least N log N steps, but could take more depending on the input.
+    We say its time complexity is Ω(N log N), because it will never be faster than a constant times N log N for large N.
+
+
+1. Big O Notation (O(f(N)))
+
+Describes the upper bound of an algorithm’s running time.
+It tells you the worst-case scenario: the algorithm will not take 
+more than O(f(N)) time for large N.
+Example: If an algorithm is O(N²), it will not take more than 
+c·N² steps for some constant c.
+
+2. Theta Notation (θ(f(N)))
+
+Describes the tight bound (both upper and lower) of an algorithm’s running time.
+It means the algorithm always takes θ(f(N)) time for large N, both 
+in the best and worst cases.
+Example: If an algorithm is θ(N²), it always takes time proportional to N².
+
+3. Omega Notation (Ω(f(N)))
+
+Describes the lower bound of an algorithm’s running time.
+It tells you the best-case scenario: the algorithm will take at 
+least Ω(f(N)) time for large N.
+Example: If an algorithm is Ω(N), it will take at least c·N steps 
+for some constant c.
+In summary:
+
+O(f(N)) = at most f(N) (upper bound)
+θ(f(N)) = exactly f(N) (tight bound)
+Ω(f(N)) = at least f(N) (lower bound)
+
+
+Note on the difference between Big O and Theta:
+
+- Big O (O(f(N))) gives an upper bound. It tells you the algorithm will not take more than a certain amount of time (worst case), but it could be faster.
+- Theta (θ(f(N))) gives a tight bound. It tells you the algorithm will always take about that much time (both upper and lower bounds), so it’s an exact growth rate.
+
+In short:
+- Big O = “at most”
+- Theta = “exactly” (both “at least” and “at most”)
+
+
+nesting means multiplying 
+sequence do addition 
 
 
