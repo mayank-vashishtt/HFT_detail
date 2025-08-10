@@ -13,7 +13,7 @@ best case complexity
 average case complexity
 worst case complexity
 
-1)
+1.
 time complexity for this 
 
 
@@ -249,3 +249,83 @@ Other Examples:**
 
 Summary:
 NP-Hard problems are some of the hardest problems in computer science. If you find a fast way to solve one, you can solve many other hard problems fast too!
+
+
+
+Calcuating time complexity in recursion 
+
+using master theorem
+
+The Master Theorem is a formula to quickly find the time complexity of 
+many recursive algorithms, especially those that divide a problem into 
+smaller subproblems.
+
+
+It applies to recurrences of the form:
+    T(N) = a * T(N/b) + f(N)
+where:
+    - a = number of subproblems
+    - N/b = size of each subproblem
+    - f(N) = extra work done outside the recursive calls
+
+
+Example: Fibonacci Series (Simple Recursion)
+The classic recursive Fibonacci function:
+```cpp
+int fib(int n) {
+    if (n <= 1) return n;
+    return fib(n-1) + fib(n-2);
+}
+```
+The recurrence for this is:
+    T(N) = T(N-1) + T(N-2) + O(1)
+This is NOT directly in the master theorem form, but we can estimate its growth:
+- Each call makes 2 more calls (except at the base case), so the number of calls doubles at each level.
+- The total number of calls is about 2^N.
+- So, the time complexity is O(2^N) (exponential time).
+
+### Master Theorem Example (Divide and Conquer)
+For recurrences like:
+    T(N) = 2 * T(N/2) + O(N)
+This matches merge sort, where:
+    - a = 2 (two subproblems)
+    - b = 2 (each half size)
+    - f(N) = O(N) (merging step)
+By the master theorem, T(N) = O(N log N).
+
+### Summary
+- Use the master theorem for recurrences like T(N) = a*T(N/b) + f(N).
+- For Fibonacci, the recurrence grows much faster (exponential), so master theorem does not apply directly.
+- Always write the recurrence, then check if it matches the master theorem form.
+
+
+
+Master Theorem (for T(N) = a·T(N/b) + f(N))
+Identify a, b, and f(N):
+
+a = number of subproblems
+b = factor by which problem size is divided
+f(N) = extra work done outside recursion
+Calculate log_b(a):
+
+This is the critical exponent: log base b of a.
+Compare f(N) with N^{log_b(a)}:
+
+Case 1: If f(N) = O(N^{log_b(a) - ε}) for some ε > 0 (f(N) grows slower),
+then T(N) = Θ(N^{log_b(a)})
+Case 2: If f(N) = Θ(N^{log_b(a)}) (f(N) grows at the same rate),
+then T(N) = Θ(N^{log_b(a)} · log N)
+Case 3: If f(N) = Ω(N^{log_b(a) + ε}) for some ε > 0 (f(N) grows faster),
+and a·f(N/b) ≤ c·f(N) for some c < 1 and large N,
+then T(N) = Θ(f(N))
+
+Example: Merge Sort
+Recurrence: T(N) = 2·T(N/2) + O(N)
+a = 2, b = 2, f(N) = O(N)
+log_2(2) = 1, so N^{log_2(2)} = N
+f(N) = O(N), which is the same as N^{log_2(2)}
+So, by Case 2: T(N) = Θ(N log N)
+Summary Table (from image):
+If f(N) is smaller: Θ(N^{log_b(a)})
+If f(N) is same: Θ(N^{log_b(a)} · log N)
+If f(N) is bigger: Θ(f(N))
