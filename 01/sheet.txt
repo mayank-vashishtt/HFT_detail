@@ -329,3 +329,6 @@ Summary Table (from image):
 If f(N) is smaller: Θ(N^{log_b(a)})
 If f(N) is same: Θ(N^{log_b(a)} · log N)
 If f(N) is bigger: Θ(f(N))
+
+
+

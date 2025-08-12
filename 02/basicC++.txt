@@ -1,0 +1,266 @@
+# C++ vs Java Syntax Comparison Cheat Sheet
+
+## 1. Hello World
+
+**C++**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+```
+
+**Java**
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+---
+
+## 2. Variables & Data Types
+
+**C++**
+
+```cpp
+int age = 25;
+float price = 19.99;
+char grade = 'A';
+string name = "Alice"; // requires #include <string>
+bool isHappy = true;
+```
+
+**Java**
+
+```java
+int age = 25;
+float price = 19.99f; // 'f' suffix needed for float literal
+char grade = 'A';
+String name = "Alice"; // capital S
+boolean isHappy = true;
+```
+
+---
+
+## 3. Conditionals
+
+**C++**
+
+```cpp
+if (x > 0) {
+    cout << "Positive" << endl;
+} else if (x < 0) {
+    cout << "Negative" << endl;
+} else {
+    cout << "Zero" << endl;
+}
+```
+
+**Java**
+
+```java
+if (x > 0) {
+    System.out.println("Positive");
+} else if (x < 0) {
+    System.out.println("Negative");
+} else {
+    System.out.println("Zero");
+}
+```
+
+---
+
+## 4. Loops
+
+**For Loop**
+
+```cpp
+for (int i = 0; i < 5; i++) {
+    cout << i << " ";
+}
+```
+
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.print(i + " ");
+}
+```
+
+**Enhanced For Loop**
+
+```cpp
+vector<int> nums = {1, 2, 3};
+for (int n : nums) {
+    cout << n << " ";
+}
+```
+
+```java
+int[] nums = {1, 2, 3};
+for (int n : nums) {
+    System.out.print(n + " ");
+}
+```
+
+---
+
+## 5. Functions / Methods
+
+**C++**
+
+```cpp
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    cout << add(3, 4);
+}
+```
+
+**Java**
+
+```java
+public static int add(int a, int b) {
+    return a + b;
+}
+
+public static void main(String[] args) {
+    System.out.println(add(3, 4));
+}
+```
+
+---
+
+## 6. Classes & Objects
+
+**C++**
+
+```cpp
+class Person {
+public:
+    string name;
+    int age;
+
+    void greet() {
+        cout << "Hello, my name is " << name << endl;
+    }
+};
+
+int main() {
+    Person p;
+    p.name = "Alice";
+    p.age = 30;
+    p.greet();
+}
+```
+
+**Java**
+
+```java
+class Person {
+    String name;
+    int age;
+
+    void greet() {
+        System.out.println("Hello, my name is " + name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.name = "Alice";
+        p.age = 30;
+        p.greet();
+    }
+}
+```
+
+---
+
+## 7. Arrays
+
+**C++**
+
+```cpp
+int arr[3] = {1, 2, 3};
+for (int i = 0; i < 3; i++) {
+    cout << arr[i] << " ";
+}
+```
+
+**Java**
+
+```java
+int[] arr = {1, 2, 3};
+for (int i = 0; i < arr.length; i++) {
+    System.out.print(arr[i] + " ");
+}
+```
+
+---
+
+## 8. Exception Handling
+
+**C++**
+
+```cpp
+try {
+    throw runtime_error("Error occurred");
+} catch (const exception &e) {
+    cout << e.what();
+}
+```
+
+**Java**
+
+```java
+try {
+    throw new Exception("Error occurred");
+} catch (Exception e) {
+    System.out.println(e.getMessage());
+}
+```
+
+---
+
+## 9. File Handling
+
+**C++**
+
+```cpp
+#include <fstream>
+ofstream file("data.txt");
+file << "Hello";
+file.close();
+```
+
+**Java**
+
+```java
+import java.io.*;
+FileWriter writer = new FileWriter("data.txt");
+writer.write("Hello");
+writer.close();
+```
+
+---
+
+## 10. Key Differences Summary
+
+* **Memory**: C++ has manual memory management; Java has garbage collection.
+* **OOP**: Java forces everything inside classes; C++ allows procedural code.
+* **Headers vs Imports**: C++ uses `#include`; Java uses `import`.
+* **Strings**: `string` in C++ vs `String` in Java.
+* **Compilation**: C++ → machine code; Java → bytecode (JVM).
+* **Pointers**: Present in C++, hidden in Java.
+* **Multiple Inheritance**: Allowed in C++ (with care), not in Java (interfaces instead).
