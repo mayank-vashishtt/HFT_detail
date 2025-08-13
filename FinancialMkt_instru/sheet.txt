@@ -1,0 +1,177 @@
+Financial markets are forums where suppliers and demanders of funds transact business. 
+They are crucial for capital allocation in economies
+
+It means that financial markets (like stock markets, bond markets, 
+or currency markets) are places—physical or online—where people 
+who have extra money (suppliers of funds) and people or businesses
+who need money (demanders of funds) meet to make deals.
+
+They are crucial for capital allocation because they help direct 
+money to where it can be used most productively—for example:
+
+Investors putting money into companies that want to grow.
+
+Banks lending to businesses that need new equipment.
+
+Governments selling bonds to fund public projects.
+
+In short: financial markets are like matchmaking hubs for money, 
+ensuring it flows from those who have it to those who can put it to work 
+in the economy.
+
+--------------------------------------
+
+Types of Financial Markets
+Financial markets can be divided into two broad categories 
+based on the length of time for which funds are borrowed or invested.
+
+
+A. Money Market
+Purpose: For short-term borrowing and lending.
+
+Maturity period: Less than one year.
+
+Instruments traded: Treasury bills (T-bills), commercial paper, certificates of deposit (CDs), repurchase agreements (repos).
+
+Participants: Banks, corporations, governments, and large investors.
+
+Risk & Return: Generally low risk and low return, 
+because the maturity is short and borrowers are usually very reliable.
+
+📌 Example:
+A company needs cash to pay salaries but expects customer payments next month. 
+It can borrow in the money market for 30 days through commercial paper.
+
+
+
+B. Capital Market
+Purpose: For long-term borrowing and investment.
+
+Maturity period: More than one year.
+
+Instruments traded: Stocks (equity shares), corporate bonds, 
+government bonds, debentures.
+
+Participants: Individual investors, institutional investors 
+(mutual funds, pension funds), companies, governments.
+
+Risk & Return: Higher risk compared to the money market, 
+but also higher potential returns.
+
+📌 Example:
+A company wants to build a new factory and needs ₹500 crore. 
+It can raise this money by issuing shares or bonds in the capital market.
+
+
+
+
+3. How Firms Raise Money in Capital Markets
+When a firm needs funds, it has two main ways to raise them in the capital market:
+
+1. Private Placement
+Definition: Selling securities (shares or bonds) directly to a small group of investors, such as banks, insurance companies, pension funds, or wealthy individuals.
+
+Features:
+
+No public advertisement.
+Faster and less expensive than a public issue.
+Fewer regulatory requirements.
+Investors are usually experienced and can invest large sums.
+Example: A startup sells shares to a venture capital firm without listing on the stock exchange.
+
+
+
+2. Initial Public Offering (IPO)
+Definition: The first time a company sells its shares to the general public and lists them on a stock exchange.
+
+Features:
+
+Widely advertised and open to all investors.
+Requires approval from market regulators (like SEBI in India).
+Costly and time-consuming due to legal and marketing requirements.
+Once listed, the company’s shares can be traded freely on the stock market.
+Example: Zomato’s IPO in 2021, where anyone with a demat account could buy shares.
+
+
+
+Yes — private placement and IPO are just two of the ways companies 
+raise money in capital markets.
+There are several other methods depending on whether 
+they want equity funding (selling ownership) or debt funding (borrowing).
+
+Other Ways Firms Raise Capital
+
+1. Rights Issue
+Definition: The company offers existing shareholders the right to 
+buy additional shares at a discounted price before offering them to the public.
+
+Purpose: To raise more equity without bringing in new owners first.
+
+Example: Reliance Industries issues new shares to its current shareholders 
+at a 10% discount.
+
+
+2. Follow-on Public Offering (FPO)
+Definition: After an IPO, a company can issue additional shares to the public.
+
+Purpose: To raise more capital for expansion or debt repayment.
+
+Example: A listed company needs funds for a new project, 
+so it sells more shares in an FPO.
+
+3. Corporate Bonds / Debentures
+Definition: The company borrows money from investors and promises to 
+pay interest periodically plus the principal amount at maturity.
+
+Types:
+
+Secured bonds (backed by company assets).
+Unsecured debentures (backed only by the company’s creditworthiness).
+
+Example: Tata Motors issues corporate bonds with a 7% annual interest rate.
+
+4. Venture Capital & Private Equity
+Venture Capital (VC): Funding from specialized firms or investors for 
+early-stage startups.
+
+Private Equity (PE): Funding from firms for more 
+mature businesses (often for expansion, restructuring, or buyouts).
+
+Example: Sequoia Capital invests ₹50 crore in a tech startup.
+
+
+
+5. Crowdfunding
+Definition: Raising small amounts of money from a large number of people, usually via online platforms.
+
+Types:
+
+Equity crowdfunding (investors get shares).
+
+Debt crowdfunding (investors get repaid with interest).
+
+Example: A small brewery raises ₹1 crore by selling shares via an 
+equity crowdfunding website.
+
+
+6. Loan Syndication
+Definition: Multiple banks or financial institutions jointly lend money for a large project.
+
+Purpose: Reduces risk for lenders since the loan is shared.
+
+Example: An infrastructure company borrows ₹2,000 crore from a consortium of banks to build a highway.
+
+
+7. Convertible Securities
+Definition: Bonds or preferred shares that can be converted into common shares later.
+
+Benefit: Investors get fixed returns initially and the option to convert into equity if the company grows.
+
+Example: A company issues convertible bonds with a 5-year maturity.
+
+
+💡 In short, the main categories are:
+
+Equity funding → IPO, FPO, rights issue, private placement, venture capital, crowdfunding.
+
+Debt funding → Corporate bonds, debentures, bank loans, loan syndication, convertible bonds.
