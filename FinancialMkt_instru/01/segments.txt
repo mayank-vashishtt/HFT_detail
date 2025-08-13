@@ -1,0 +1,153 @@
+Segments of the Financial Market
+
+Financial markets are often divided into two main segments based on whether the 
+securities are newly issued or already existing.
+
+1. Primary Market
+Definition:
+The primary market is where securities (like shares or bonds) are created and sold 
+for the first time. This is where companies, governments, or other 
+organizations raise fresh capital.
+
+Key Features:
+
+Securities are issued directly by the company to investors.
+Money from investors goes to the issuing company.
+Often called the “new issue market”.
+Regulated by authorities like SEBI in India.
+
+
+Main Activities:
+Initial Public Offering (IPO) → A private company sells shares to the public for the first time.
+Follow-on Public Offering (FPO) → A listed company sells additional shares.
+Private Placement → Selling securities directly to select investors.
+Rights Issue → Offering additional shares to existing shareholders.
+
+Example:
+When Zomato launched its IPO in 2021, it sold new shares for the first time in 
+the primary market, raising money for business growth.
+
+
+2. Secondary Market
+Definition:
+The secondary market is where already-issued securities are bought and 
+sold among investors. The issuing company does not receive any money from 
+these transactions.
+
+Key Features:
+Involves trading of existing securities.
+Takes place on platforms like stock exchanges (NSE, BSE in India; NYSE, NASDAQ in the US).
+Provides liquidity — investors can sell their holdings at any time.
+Prices fluctuate based on supply & demand, news, company performance, and market sentiment.
+
+Example:
+You buy 100 shares of Infosys from another investor on the NSE. 
+This trade happens in the secondary market, and Infosys doesn’t get any money 
+from your purchase.
+
+
+---------------------------------------------------------------
+
+1. Bonds — Debt Securities
+Definition: A bond is basically a loan that an investor gives to a 
+company or government.
+
+How it works:
+You (the investor) buy a bond from a company or government.
+They promise to pay you regular interest (called a coupon) and 
+return the principal at the end of a fixed time (maturity).
+
+Key Features:
+
+Fixed maturity date (e.g., 5 years, 10 years).
+Interest is usually fixed and paid periodically.
+Lower risk than stocks (but returns are also lower).
+Bondholders are creditors, not owners.
+If a company goes bankrupt, bondholders get paid before shareholders.
+
+Example: You buy a 5-year corporate bond at ₹1,000 face value with 7% interest — 
+you’ll get ₹70 each year plus your ₹1,000 back after 5 years.
+
+
+
+2. Stocks (Common Shares) — Equity Securities
+Definition: A stock represents ownership in a company.
+
+How it works:
+
+You buy shares of a company.
+You now own a piece of that company — if it grows, 
+your shares can increase in value; if it pays dividends, 
+you get a portion of the profits.
+
+Key Features:
+
+No maturity date — you can hold the stock as long as you want.
+Dividends are not guaranteed (depend on company profits).
+Higher potential returns, but also higher risk.
+Shareholders get voting rights in company decisions.
+In bankruptcy, shareholders get paid last (after creditors and bondholders).
+
+Example: You buy 100 shares of Infosys — 
+if Infosys profits, your share price may rise and you may receive dividends.
+
+
+
+3. Preferred Stocks (Preference Shares) — Hybrid Securities
+Definition: A preferred stock is a special type of share that has 
+features of both stocks and bonds.
+
+How it works:
+
+You buy preference shares from a company.
+You receive fixed dividends (like interest on a bond), 
+usually before common shareholders are paid.
+You generally don’t have voting rights (unlike common shareholders).
+
+Key Features:
+Dividends are fixed and paid before common stockholders.
+If the company is liquidated, preferred shareholders are paid after bondholders but before common shareholders.
+Less risky than common stock, but usually less profitable in the long run.
+
+Can be convertible (into common stock later) or redeemable (company can buy them back).
+
+Example: You own preferred shares in a bank that pays you ₹8 per share annually, 
+no matter if profits go up or down.
+
+
+
+
+---------------------------------------
+
+1. Share
+Definition: A share is a unit of ownership in a company.
+
+Companies divide their ownership into equal parts called shares.
+
+If you own shares, you are called a shareholder.
+
+Each share has a face value (nominal value) and can be bought or sold in the market.
+
+📌 Example:
+A company issues 1,000 shares in total. You buy 100 shares — 
+that means you own 100 individual units of that company’s equity.
+
+
+2. Stake
+Definition: A stake means your overall ownership percentage in a company, often expressed as a percentage of total shares.
+
+It represents your interest or claim in the company, not just the number of shares.
+
+The stake can be made up of:
+
+Shares (common or preferred)
+
+Other equity rights like options or convertible securities
+
+📌 Example (continuing the above):
+If you own 100 shares out of 1,000 total, your stake is 10%.
+So:
+
+Shares = the units (100)
+
+Stake = the proportion of ownership (10%)
