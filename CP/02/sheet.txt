@@ -1,0 +1,59 @@
+why linkedin list not allow sort in c++ ? 
+stuct in c++? 
+
+and to sort user defined types, you need to teach sort how to compare Object
+implement operator
+
+
+struct student{
+    string name;
+    double height;
+
+bool operator <(const Student& o) const{
+    return height> 0.height;
+}
+}
+
+then after c++ 11 ? wht happened ?    
+how sorting algo in avg case O(n)
+worst case ? 
+
+
+printing in c++ 
+nth_ element ? 
+reverse algo 
+unique algo 
+binary seach  algo 
+lower bound algo 
+upper bound  
+next_permutation algo 
+
+
+string in c++ 
+input in c+++ 
+
+
+
+why this is s = s +'e' is O(N)
+and this is s+=e is O(1)
+
+
+how to get whole line in input as string ? 
+
+
+int n; 
+cin>>n;
+string s;
+getline(cin,s);
+getline(cin,s);
+cout<<s;
+
+
+substr??? function 
+
+compare string ? 
+
+s.begin()
+s.end()
+
+containers

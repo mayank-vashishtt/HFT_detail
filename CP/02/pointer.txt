@@ -1,0 +1,66 @@
+A pointer is a variable that stores the memory address of another variable.
+
+Key difference from Java:
+
+In Java, all objects are accessed via references automatically (hidden pointers), but primitive variables (int, char, etc.) are not pointers.
+
+In C++, we can explicitly create, store, and manipulate pointers — even for primitive types.
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 42;     // normal int variable
+    int* p = &x;    // p stores the address of x
+
+    cout << "Value of x: " << x << "\n";
+    cout << "Address of x: " << &x << "\n";
+    cout << "Value stored in pointer p: " << p << "\n";
+    cout << "Value at address p points to: " << *p << "\n";
+}
+
+
+Value of x: 42
+Address of x: 0x7ffeefbff4ac
+Value stored in pointer p: 0x7ffeefbff4ac
+Value at address p points to: 42
+
+
+
+3. Pointer role in C++
+
+Pointers are used for:
+
+Direct memory access
+You can read/write data at a specific address.
+Dynamic memory allocation
+Allocating memory at runtime (new / delete).
+Passing large data efficiently
+Instead of copying big objects, pass their address.
+Building data structures
+Linked lists, trees, graphs (all need pointers).
+Interfacing with hardware or low-level APIs
+C++ can work with raw memory for performance.
+
+
+
+Pointer and -> operator
+#include <iostream>
+using namespace std;
+
+struct Student {
+    string name;
+    void greet() { cout << "Hi, I am " << name << "\n"; }
+};
+
+int main() {
+    Student s;
+    s.name = "Alice";
+
+    Student* p = &s; // pointer to s
+    p->name = "Bob"; // access via pointer
+    p->greet();
+}
+If you have a pointer to an object, use -> to access its members
