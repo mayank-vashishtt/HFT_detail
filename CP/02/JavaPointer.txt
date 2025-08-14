@@ -1,0 +1,74 @@
+First — Why Java doesn’t have "pointers"
+
+In Java, every time you make an object like:
+Student s = new Student();
+
+s is not the object itself — it’s a reference to the object.
+You don’t have to worry about where in memory that object lives — Java handles it for you.
+
+In C++, the closest equivalent to a Java reference is a pointer —
+except in C++ you can:
+
+See the actual memory address.
+Move the pointer around.
+Point it to different places.
+Even break things if you point wrong 😅.
+
+
+C++ Pointer Basics
+Think of a pointer as:
+
+A variable that stores the memory address of another variable.
+
+The pointer itself lives somewhere in memory,
+and inside it is just a number (the address).
+
+int x = 10;      // a normal int
+int* p = &x;     // p stores the address of x
+
+&x = “address of x”
+p now stores the memory location of x.
+
+
+Accessing data through a pointer
+
+If you have the pointer p,
+you can use *p to dereference it — get the value at that address:
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    int* p = &x;  // pointer to x
+
+    cout << "x value: " << x << "\n";       // 10
+    cout << "x address: " << &x << "\n";    // e.g. 0x7ffee...
+    cout << "p value (address): " << p << "\n"; // same as &x
+    cout << "value at p (*p): " << *p << "\n";  // 10
+
+    *p = 20;  // changes x through pointer
+    cout << "x after *p change: " << x << "\n"; // 20
+}
+
+---------------------------------------
+
+
+Java primitives vs. objects
+
+In Java, you have two big categories of variables:
+
+a) Primitives
+Stored directly in the variable (no hidden address following).
+Examples: int, double, char, boolean
+int a = 10;   // a stores the actual 10
+int b = a;    // b gets its own copy of 10
+b = 20;       // changing b does not affect a
+
+
+b) Object references
+Stored as a reference (address) to a heap object.
+Student s1 = new Student();
+Student s2 = s1; // both point to same object
+s2.name = "Mayank"; // changes s1 too
