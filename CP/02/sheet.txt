@@ -57,3 +57,75 @@ s.begin()
 s.end()
 
 containers
+
+
+
+-----------------------------------------------------------------------
+
+
+ANSWER 1
+
+Why std::list cannot be sorted with std::sort"
+
+Why the problem exists
+std::sort (from <algorithm>) needs Random Access Iterators.
+
+Why the problem exists
+std::sort (from <algorithm>) needs Random Access Iterators.
+That means it must be able to jump like it + 5 in constant time.
+Works with std::vector, std::deque — because their elements are in contiguous memory (like Java arrays).
+std::list is a doubly linked list —
+
+No contiguous memory, only knows next and prev.
+Can’t jump directly to the middle without walking step by step.
+So std::sort(list.begin(), list.end()) won’t compile.
+Instead, std::list has its own list::sort() member function
+Uses merge sort, perfect for linked lists.
+
+
+#include <iostream>   // for cout
+#include <list>       // for std::list
+
+using namespace std;  // now we can write list instead of std::list
+
+int main() {
+    // Create a linked list of integers
+    list<int> numbers = {5, 2, 9, 1, 3};
+
+    cout << "Before sort: ";
+    for (int n : numbers) {
+        cout << n << " "; // print elements
+    }
+    cout << "\n";
+
+    // Sort using the list's own sort method
+    numbers.sort(); // Merge sort internally
+
+    cout << "After sort: ";
+    for (int n : numbers) {
+        cout << n << " ";
+    }
+    cout << "\n";
+}
+
+
+with vector 
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm> // for std::sort
+
+using namespace std;
+
+int main() {
+    vector<int> numbers = {5, 2, 9, 1, 3};
+
+    // ✅ Works fine
+    std::sort(numbers.begin(), numbers.end());
+
+    for (int n : numbers) {
+        cout << n << " ";
+    }
+}
+

@@ -1,0 +1,87 @@
+In C++, if you have your own struct/class (like Student),
+STL algorithms like std::sort need to know how to compare two objects.
+By default, C++ doesn’t know whether “a student is less than another” 
+unless you tell it.
+
+
+Two main ways to tell C++ how to sort a custom type
+
+
+Method 1 — Overload the < operator
+
+You define a bool operator<(const T& other) const inside your struct/class.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Student {
+    string name;
+    double height;
+
+    // Compare by height
+    bool operator<(const Student& o) const {
+        return height < o.height;
+    }
+};
+
+int main() {
+    vector<Student> v = {
+        {"Alice", 160.5},
+        {"Bob", 175.2},
+        {"Charlie", 168.3}
+    };
+
+    sort(v.begin(), v.end()); // Uses operator<
+
+    for (auto &s : v)
+        cout << s.name << " " << s.height << "\n";
+}
+
+
+Pros
+Shorter when you always sort by the same rule.
+
+Cons
+Hard to change sorting logic without modifying the struct.
+
+
+
+Method 2 — Provide a comparator (lambda or function)
+Instead of defining <, pass a comparator to std::sort.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Student {
+    string name;
+    double height;
+};
+
+int main() {
+    vector<Student> v = {
+        {"Alice", 160.5},
+        {"Bob", 175.2},
+        {"Charlie", 168.3}
+    };
+
+    // Sort by height (ascending)
+    sort(v.begin(), v.end(),
+        [](const Student &a, const Student &b) {
+            return a.height < b.height;
+        });
+
+    for (auto &s : v)
+        cout << s.name << " " << s.height << "\n";
+}
+
+
+
+Extra: Multiple sort criteria
+sort(v.begin(), v.end(),
+    [](const Student &a, const Student &b) {
+        if (a.height == b.height)
+            return a.name < b.name;
+        return a.height < b.height;
+    });
+
+
