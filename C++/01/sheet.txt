@@ -1,0 +1,110 @@
+defining hft?
+
+arbitrage? 
+
+
+what is order book ? 
+
+bids and asks ? 
+
+matching engine ? 
+
+wht is NIFTY ? 
+
+what is nse and bse and how same stock traded in both ? 
+
+
+what is fill in mkt ? 
+
+
+wht hft to do with c++ and latency ? 
+
+mkt data ? -- bids and ask 
+
+
+what are sockets ? 
+
+
+what NIC is ?
+
+
+
+socket connects to the port ? 
+
+
+every milli sec mkt data changes ?
+
+
+
+write a dummy socket class 
+you have to read a data from java web socket and parse string and do million of this operation
+
+how much time java will take to run it ? 
+
+wht is bash shell script 
+
+
+g++ name.cpp -o outut
+./outut
+
+ 
+g++ name.cpp -S
+
+why java in bad in latency ? 
+running in jvm of java creates another layer, do that create latency. ?
+garabage collector is the reason ?  has a context switch and unpredicatable that makes it slow 
+all objects are in heap 
+way it allocates memory
+object oriented? it makes it slow tooo , 
+
+
+What is FPGA in HFT?
+and how its the easiest way to go in HFT
+
+
+
+garbage collector --- atuomatic memory management
+how java performe garbage collection
+mark sweep 
+ref counting
+
+has a context switch and unpredicatable that makes it slow 
+
+
+
+threads in java
+
+
+multi threading jn java?
+
+
+daemon thread? 
+
+
+
+c++ dont haave grabage collector?
+
+
+super in java? 
+
+
+how java called first super constructor before calling student()
+calling super parent makes it slow 
+
+
+c++ when compile it it generates assembly instruction
+java compiled to java byte code
+java is platform independent -- jvm should be supported 
+jvm is os dependent 
+c++ is platform dependent
+java. --> bytecode ---> JVM 
+c++ is direcly interacting with CPU 
+
+thats why c++ is faster
+
+
+vim cat 
+
+
+
+when both import have function how to distintguish in java?
