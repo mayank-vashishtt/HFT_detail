@@ -1,0 +1,115 @@
+sum problem in C++
+
+struct in c++? 
+what is struct?
+class in java offers constructor, oops, private static -- access modifiers
+
+
+
+one order struct have order id, bool -- its bid or ask, price , qty
+2 object of orders createone object is of buy and one is of sell  -- istance buy and sell 
+pass it to match function if buyer is able to match with seller 
+
+
+order id 1  buy order 500price 10qty
+order id 2 sell order 500price 5qty 
+if i pass them to match function 
+match of 5 qty
+respons with another stuck -- qtyFit? -- int qtyfilled
+
+
+
+
+deep copy vs shallow copy
+
+
+
+
+deafult behaviour of c++ is to do deep copy 
+
+int* ptr
+
+int x --- 4 bytes -2^31 to 2^31
+int is signed integer, 1 bit is reserved 
+unsigned integer --- 0 to 2^31 
+char -- 1 byte 
+
+
+
+int -- > 4 bytes 32 bits 
+uint -- > 4 bytes 32 bits 
+
+int is not 4 bytes always 
+why?
+
+registor --> 
+why 32 bit pc and 64 bit computer?
+registor size is this 
+registor is your CPU word size
+you read something in RAM as batches of CPU word size 
+
+long long ? 
+
+int32_t y?
+int64_t x?
+
+
+unsigned char ?
+The range of char in C++ depends on whether it is signed or unsigned:
+
+Signed char: −128 to 127
+Unsigned char: 0 to 255
+
+
+
+pointers? -- USP of c++ 
+
+kernel ?
+raw memory location ? 
+c++ have a feature to interact with raw memory 
+that is with pointer 
+pointer. --- it is a something that let you plays with raw meomory in RAM 
+
+int x  = 22 ;
+int32_t* x = x;
+
+where we store address? 
+address is hexdecimal, binary 
+i should store address in Pointers
+
+int* ptr = &x ;
+
+
+*ptr?
+
+why char* ptr give value. 
+
+
+a -> isBid doing asterik a . for you 
+
+
+
+tcp is suppodes to send stream of bytes 
+who is receiving bytes have to frame 
+
+wht UDP gives?  datagrams
+
+
+unsinged char to 
+
+what is buffer? .
+ 
+ 255 is 1111111111111111111111111 ? 
+
+ notes from copiolot 
+
+ the uint ? 
+
+
+ binary to number ? 
+ it reads it from back to front 
+
+
+ big endian msb to lsb 
+ lil endian lsb to msb 
+ role of tcp ? headers in tcp ? 
