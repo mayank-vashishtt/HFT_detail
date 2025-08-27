@@ -1,0 +1,21 @@
+
+pointers. 
+
+
+
+c+++ decayed array to poitner by default 
+and why can't we print it there? 
+
+
+what arr print ?
+and wht arr + 1 ? 
+struct with arr ? 
+
+
+
+there are 2 types of memoruy 
+stack and heap 
+
+
+
+

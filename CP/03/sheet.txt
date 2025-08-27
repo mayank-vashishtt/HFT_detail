@@ -1,0 +1,140 @@
+containers in cpp 
+
+
+sequence containers 
+
+
+
+vector <T> -- Dynamic size array 
+how to declare it 
+vector <int> a; 
+or 
+vector < long long> a(100);
+
+wht this mean 
+vector < long long> a(n,100);
+
+
+...existing code...
+
+Standard Template Library
+
+vector<T>
+
+Traversing using indices:
+vector<int> a{1, 2, 3, 4, 5};
+int sum = 0;
+for (int i = 0; i < int(a.size()); i++) {
+    sum += a[i];
+}
+for (size_t i = 0; i < a.size(); i++) {
+    sum += a[i];
+}
+for (int i = int(a.size()) - 1; i >= 0; i--) {
+    sum += a[i];
+}
+for (size_t i = a.size(); i-- > 0;) {
+    sum += a[i];
+}
+cout << sum << endl; // 60
+
+Traversing using iterators:
+for (vector<int>::iterator it = a.begin(); it != a.end(); ++it) {
+    sum += *it;
+}
+for (auto it = a.begin(); it != a.end(); ++it) {
+    sum += *it;
+}
+
+C++11 range-based for loop:
+for (int x : a) {
+    sum += x;
+}
+for (auto x : a) {
+    sum += x;
+}
+
+
+bubble sort in cpp 
+
+why unsigned in bubble sort why this int(size)
+
+
+...existing code...
+
+Buggy bubble sort in C++ STL
+
+- .size() returns an unsigned integer.
+- If you write: for (int i = 1; i < a.size() - 1; i++) { ... }
+  and a.size() is 0, then a.size() - 1 becomes a very large number due to unsigned integer wraparound.
+- This causes bugs and warnings about signed/unsigned comparison.
+
+Example buggy code:
+vector<int> a;
+cout << a.size() - 1 << endl; // can print a huge number if a.size() == 0
+
+Possible fixes:
+for (int i = 1; i < int(a.size()) - 1; i++) { ... }
+for (int j = 0; j < int(a.size()) - i; j++) { ... }
+for (int i = 1; i + 1 < a.size(); i++) { ... }
+for (int j = 0; j + 1 < a.size() - i; j++) { ... }
+
+Bubble sort template:
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    for (int i = 1; i < int(a.size()) - 1; i++) {
+        for (int j = 0; j < int(a.size()) - i; j++) {
+            if (a[j] > a[j + 1]) {
+                swap(a[j], a[j + 1]);
+            }
+        }
+    }
+    for (int i = 0; i < n; i++)
+        cout << a[i] << (i == n - 1 ? '\n' : ' ');
+    return 0;
+}
+
+...existing
+
+
+2d array?
+
+...existing code...
+
+vectors can be compared directly (lexicographical order) using comparison operators < <= == >= > !=
+
+vector<int> a{1, 2, 3};
+vector<int> b{1, 2, 3};
+vector<int> c{1, 2, 4};
+vector<int> d{1, 2, 3, 0};
+
+cout << (a == b) << endl; // 1
+cout << (a < c) << endl;  // 0
+cout << (b != c) << endl; // 1
+cout << (a < d) << endl;  // 1
+
+// Comparison is O(n) and works lexicographically (like string comparison)
+
+
+
+pair in c++ ? 
+
+list<T> wht is this in c++ ? 
+tell me time complexity of everything i this file 
+
+deque<T> in c++ ? 
+
+
+
+accessing any thing in order 1 is called randome access? 
+
+
+queue<T>
+
+stack<T>
