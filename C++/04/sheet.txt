@@ -1,0 +1,132 @@
+This image illustrates a concept in C++ related to pointers and function arguments. Here's the breakdown:
+
+Code Explanation:
+Function f:
+
+void f(int* ptrToX) {
+    ptrToX = nullptr;
+}
+
+
+The function f takes a pointer to an integer (int* ptrToX) as its argument.
+Inside the function, the pointer ptrToX is set to nullptr. This means the pointer no longer points to any valid memory addres
+
+
+Main Function:
+
+int main() {
+    int x = 12;
+    f(&x);
+    cout << x; // Outputs: 12
+}
+
+
+A variable x is initialized with the value 12.
+The address of x (&x) is passed to the function f.
+After the function call, the value of x remains unchanged (12), as the function only modifies the local copy of the pointer, not the actual value of x.
+Key Concept:
+Pointer Modification:
+When a pointer is passed to a function, the function receives a copy of the pointer (not the original pointer itself).
+Modifying the pointer inside the function (e.g., setting it to nullptr) does not affect the original pointer or the value it points to.
+
+
+Diagram Explanation:
+The diagram visually represents the memory and pointer behavior:
+ptrToX initially points to the memory address of x (value 12).
+Inside the function, ptrToX is set to nullptr, breaking the connection to x.
+However, the value of x remains unchanged (12) because the function does not directly modify the value stored at the memory address.
+Output:
+
+
+The cout << x; statement in the main function outputs 12, confirming that the value of x was not altered by the function f.
+
+
+wht is heap and stack in c++
+new / malloc -- heap 
+
+
+matrix 
+pointers to array of pointers(array of pointers) -- 
+
+
+write code for it 
+m pointers n rzise
+
+
+int ** x
+
+
+heap based array ? 
+stack based bases array ? 
+
+
+make a transpose fo arry ?
+
+declare a linkedin list in c+++ and connect 4-5 nodes 
+print head and whole linked list
+
+
+
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* makeLL() {
+    Node* head = new Node{10, nullptr}; // Create head node
+    Node* next = new Node{11, nullptr}; // Create next node
+    head->next = next;                 // Connect head to next
+    return head;
+}
+
+int main() {
+    Node* head = makeLL(); // Create the linked list
+    Node* temp = head;     // Temporary pointer to traverse the list
+
+    while (temp != nullptr) {
+        cout << temp->data << " -> "; // Print the data of the current node
+        temp = temp->next;           // Move to the next node
+    }
+    cout << "nullptr" << endl;
+
+    // Free allocated memory
+    delete head->next;
+    delete head;
+
+    return 0;
+}
+
+
+
+why segmentation fault ? 
+
+dangling pointer?
+
+what is ddestrutore? and use it in node linkedlist
+
+
+stack overflow ? 
+
+context switch ?
+stack heap which is faster? and why ?
+heap memory ? 
+
+
+
+nrvo -- 
+rvo -- return value optimization 
+
+
+system calls kernel calls?
+pages?
+
+
+grep command ? 
+Which sys call gets used for larger memory allocs ?
+
+what happens if we use '\n'?
+new int[256*1024]
+4MB
