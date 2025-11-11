@@ -1,0 +1,89 @@
+last session -- recap 
+
+protocols , tcp , udp 
+why udp is faster than tcp?
+1. No Connection Establishment
+TCP requires a 3-way handshake (SYN, SYN-ACK, ACK) to establish a connection before data transfer
+UDP sends data immediately without any connection setup overhead
+2. No Acknowledgment
+TCP requires the receiver to acknowledge every packet received
+UDP has no acknowledgment mechanism, reducing round-trip overhead
+
+we discussed tcp in depth 
+mac address?
+
+
+--------------------------------------------------------
+
+how to use lib in c++ ? 
+
+
+host your algo in same region where infra exist thats co location (millisecond level)
+
+
+binance infra --
+matching engine is always centralized 
+load balancer routes to(like if req coming from india i will route to pod 1 there internal logic)
+-- api gateway(multiple:) -- 
+-- diff microservices (like position service, read service) -- 
+
+
+pod physical location -- as low latency dev 
+hot shark in system design ?
+hot swap -- ability to replace components without downtime
+
+hot spot problem ? -- 
+when multiple req come to same db or same server at same time
+
+
+BTC ETH 
+what is shad in binance? -- shadow copy of order book
+
+http is faster than https 
+
+ioc gtc cancel orders type ? 
+
+ws arbitage --- 
+
+
+ws::bybit.com/getorders -- steps to hit this endpoint 
+DNS Lookup → TCP Connection → TLS Handshake → WebSocket Upgrade → Bidirectional Communication
+if this is internal endpoint 
+ws::bybit.com -- global DNS
+/getorders --- loadbalancer
+go to DNS(wait to 5ms to get IP address)-- get IP address -- connect to this protocol
+when lost DNS again  have to reestablilish -- then go to kernel - context switch -- to see that in cache(wasted 500ms)
+
+l1 l2 l3 got empty then have to fetch from main memory waste a lot time
+in-memory cache is ANSWER but if IP changes 
+run back ground thread and check for ip change in every 5 min and update in cache
+
+--------------------------------------------------------------------------
+
+todo -- how we can offload SSL from CPU ? 
+
+ws  --- SBE ; will prefer this as its not giving json 
+http -- REST
+
+--------------------------------------------------------------------------
+what logger.h 
+.h means ? i did defination there 
+and implmentation in .cpp
+
+what is linking in c++ ? 
+
+less logger.h
+
+
+ls - lrth 
+makefile also do this 
+makefile
+
+
+cmake -- 
+CMakeLists.txt
+
+
+boost lib in c++ ? 
+google.test lib is also there
+google benchwork 
