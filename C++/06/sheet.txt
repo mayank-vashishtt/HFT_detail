@@ -1,0 +1,41 @@
+pointers in c++ 
+
+pointers in ram ? 
+
+aesterik ?  -- dereferancing 
+questions on smart pointers ? 
+
+
+
+pointer is an address to something 
+
+
+array syntax with pointers 
+
+int* arr = new int [10];
+int arr[12];
+
+
+heap and stack ? what are these? 
+heap -- new and mallac 
+
+
+
+matrixes in pointers. 
+matrix is array of array 
+matrix is a pointer to array of pointers and that pointer is also array of pointer
+
+
+
+a pointer  to pointer is  --- int ** x 
+a pointer to integer is == int * z 
+
+
+
+segmenation fault ? 
+stack frame /.? 
+
+dangling pointer? 
+
+
+distructor/? ~

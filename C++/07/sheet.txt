@@ -1,0 +1,47 @@
+why are syscalls bad ? context switch 
+
+to OS/kernel 
+
+cout is a sys call ? 
+
+how mallac behaves? 
+ 
+grep command? 
+
+is mmap for frame memory ? >
+munmap ? 
+
+stack doesnt have syscalls ? 
+but it have limitaiton that is size 
+not usually greater than 8 MB 
+
+
+how to minimize syscalls. ? 
+preloacte the memory then use it 
+
+memory pool ? 
+
+
+what is segmenation fault ? -- in ss 1 becasuse not 1 gb in stack 
+put in heap it will work 
+
+
+
+
+
+how ss3 is happening ? 
+
+
+for size use size_t ? in. c++
+
+never write raw integers, write them with bit 
+
+
+
+wht char* fucntioname means. ? 
+
+
+how to check sys calls 
+/ 
+
+?

@@ -1,0 +1,56 @@
+pub sub vs pooling ? 
+what is NIC ? 
+wht pub sub is faster than this ? 
+NIC to Rx Ring?  nic have its own rx ring 
+diff between load and store? 
+what payload have -- IP, destination address , source address , protocol type (TCP/UDP) , port no , data, check sum 
+rx ring buffer belong only to hardware , it never can be swapped 
+to store something on ram we run .store , CPU run this 
+how the hell NIC do it, it's not a CPU ? -- DMA (direct memory access) 
+DMA can write without contacting to CPU , its faster as CPU involvement is not there
+DMA controller have its own bus to write on main memory
+nic driver tell to kernel where the rx ring buffer is located in main memory
+when packet arrive nic write to that location using DMA
+process p1 is waiting for data from network
+so when data arrive nic write to main memory using DMA
+now how process p1 get notified that data is there ?    
+
+kernel have to read ring buffer and do check sum 
+socket object in kernal copy all bytes in nic buffer only payload
+process p1 which was on port 3000 now kernel socket in on 3000 
+from socket it will copy to my process p1 
+now from process p1 u can pass a msg 
+
+
+
+kernel paijing ? 
+kernel bypass ? dont do copy in socket of kernal bypass it 
+
+
+
+
+
+nic recieved bytes 
+dna we write to nic buffer
+nic driver read from buffer
+there is pub sub thing 
+kernal knows some new bits are there 
+so it notifies the app
+
+
+driver is a program that sits above a hardware. 
+
+
+
+process, i
+
+
+what is boost lib ? 
+
+boost 
+using namespace boost::asio::ip; 
+
+lamda functions ? 
+
+
+file descriptors ? 

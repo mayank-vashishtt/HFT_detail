@@ -1,0 +1,39 @@
+sheet. solving questions 
+
+last dividend --> 2 
+High growth for next 5 years: g1 --> 15 percent 
+Long-run growth after year 5: g2 --> 10 percent
+required return Required rate of return:  i.e 14 percent --> 0.14
+
+its basically 2 stage model 
+
+
+
+
+
+
+
+
+
+
+
+
+terminal value ? 
+
+
+
+first we will compute in the high stage
+D1​ --> D0(1+g1) --- 2 * 1.15 -- >2.30 
+
+D2 -- > D1(1+g1). --> 2.645
+D3.  -- > 3.041750
+D4 -- > 3.498
+D5 --> 4.022
+
+
+
+then 
+D6 --- D5(1+g1) --> ₹4.42
+
+
+5​=k−g2​D6​​

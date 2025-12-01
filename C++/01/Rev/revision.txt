@@ -1,0 +1,139 @@
+What is HFT?
+
+High Frequency Trading (HFT) is a style of trading that uses computers 
+to place thousands to millions of orders at lightning speed,
+sometimes in microseconds (millionths of a second).
+
+It’s about spotting very small price moves and 
+acting faster than almost anyone else to profit from them. 
+The game is mostly about speed—whoever reacts fastest, wins.
+
+
+in practice: 
+HFTs trade on very short timeframes. Trades may last seconds or even milliseconds.
+They use algorithms: code that reacts instantly to changes in price, news, or market volume
+Many HFT strategies involve placing many orders, canceling them rapidly, and only taking trades where the statistical odds are in their favor.
+
+Why is Speed So Important?
+The financial markets are like massive auctions that never stop. Prices move when a buyer and seller agree.
+If you see a price “lagging” between two venues or even two different instruments, you can buy low and sell high—sometimes in fractions of a second.
+Latency (delay) is the enemy. The slower your code or internet connection, the smaller your profit—sometimes you get nothing.
+
+HFT in the Real World:
+Think of big firms with servers right inside the exchange (colocation) to gain every microsecond edge.
+C++ is the language of choice because it produces ultra-fast, low-latency programs, unlike slower languages like Java/Python.
+HFT code controls network hardware, parses market data, makes trading decisions—all in under a millisecond.
+
+Why is it Controversial?
+HFT can make markets more “efficient,” but critics say it sometimes increases volatility or gives unfair advantage to firms with expensive tech.
+
+
+why C++ is used in HFT?
+It compiles directly to machine code, so there's no extra interpretation.
+Memory management is manual, not left to garbage collectors or virtual machines which randomly pause.
+Its performance is both predictable and configurable—every microsecond counts.
+
+
+
+What is Arbitrage?
+Arbitrage is the simultaneous purchase and sale of an asset 
+to profit from a difference in price across markets.
+
+It’s considered nearly risk-free, because 
+you’re not betting on the market direction—you’re exploiting pricing inefficiencies.
+
+HFT-style Arbitrage Example:
+Suppose Stock X is listed on both NSE and BSE.
+
+NSE quotes: ₹100.05 ask, ₹99.95 bid
+
+BSE quotes: ₹100.10 ask, ₹100.00 bid
+
+What you can do:
+
+Buy from NSE at ₹100.05
+
+Sell on BSE at ₹100.00
+
+Immediate profit = ₹100.00 - ₹100.05 = (-₹0.05) —not profitable due to spread and fees here.
+
+But if BSE bid jumps to ₹100.06 before anyone else notices, you capture a risk-free profit (assuming no latency).
+
+Types of Arbitrage in HFT:
+Cross-market Arbitrage: Same asset, different exchanges.
+Triangular Arbitrage: In FX, trading three currencies to net a profit.
+Statistical Arbitrage: Using statistical models to predict temporary mispricings.
+
+Why HFT Loves Arbitrage
+Requires fastest reaction time—advantage vanishes in milliseconds.
+need real-time market data, order book access, and execution capability.
+
+C++ Code Angle
+Your HFT algorithm continuously monitors market data (via sockets).
+On detecting an opportunity, as quickly as possible,
+Sends buy and sell orders.
+Cancels if opportunity vanishes (need extremely efficient error handling and code flow).
+
+high-level sketch in C++ for real-time cross-market arbitrage detection between NSE and BSE.
+${arbitrage.cpp}
+
+
+Order Book ? 
+An order book is a live, electronic list of all buy (bid) and sell (ask) orders for a particular stock at an exchange.
+It’s the “heartbeat” of trading: shows exactly what participants want to buy/sell at every price
+
+Bids: Buyers—the amount they want to buy and the price they’ll pay.
+Asks: Sellers—the amount they want to sell and the price they’ll accept.
+
+Why is it so important?
+The order book lets you see market depth. If you want to buy, you match the best-priced ask. If you want to sell, you match the best-priced bid.
+HFT bots analyze the order book's shape, speed of change, and imbalance to decide when to place/cancel orders.
+
+In C++ terms: How is it used?
+Order book data comes in every millisecond (or faster!) as a stream—HFT code must update, store, and analyze this data in real time.
+Many fast C++ structures (like std::map, priority_queue, custom arrays) are used for speed.
+
+
+What does market depth mean in the context of an order book?
+
+Market depth refers to how much buy and sell interest exists for a stock at different price levels, 
+beyond just the best bid/ask.
+
+The order book shows buyers and sellers at multiple prices—not just one.
+Deep market: Many buy/sell orders with large volumes at multiple price points—means the market can absorb big trades without the price moving much.
+Shallow market: Few orders at each price, or small sizes—one large trade can move the price a lot.
+
+Why it matters for HFT:
+If market is deep, it’s safer to make big trades (less impact).
+If shallow, HFT bots may place smaller orders, or exploit sudden swings when big orders move the book.
+
+
+Why do HFT bots care about order book imbalance (i.e., more bids than asks or vice versa)?
+Order book imbalance: When there are significantly more bids than asks, or more asks than bids, at the top price levels.
+
+More bids: Shows buying pressure; price may go up.
+More asks: Shows selling pressure; price may go down.
+
+HFT bots use imbalance for:
+Predictive trading: If book is stacked with bids, price likely to rise; bots may buy in advance.
+Liquidity provision: Bots may place orders to profit from expected short-term moves due to imbalance.
+Risk control: If imbalance is extreme, bots may pull back to avoid sudden adverse moves.
+
+
+Why do we use maps to store bids/asks?
+
+Maps keep prices automatically sorted.
+For bids, we want the highest price first (so we sort descending).
+For asks, the lowest price comes first (sorted ascending).
+This helps find the “best” price quickly, which is crucial for matching trades in real-time
+
+What triggers a trade in matchOrders()?
+A trade happens if the top (highest) bid price ≥the top (lowest) ask price.
+This means a buyer is willing to pay at least as much as a seller wants, so they are matched.
+The trade happens at the seller’s (ask) price for as much quantity as available between both orders.
+
+What do you think would happen if the bid and ask prices never overlap?
+If the best bid is always less than the best ask, no trade can happen—the function just exits.
+This can happen in a slow or thin market (not enough buyers or sellers at close prices), and the order book stays unchanged until someone updates their price.
+
+

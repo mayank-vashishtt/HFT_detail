@@ -1,0 +1,62 @@
+this is all about HFT 
+
+Quant companies in list: 
+
+alphagrep 
+worldquant 
+graviton 
+da vinci 
+optiver 
+flow traders 
+IMC 
+TRC London 
+TRC NYC 
+Millennium 
+Squarepoint 
+
+Setatel 
+Jane's Street 
+
+
+what is DEFI ? 
+
+
+Market making 
+placing order on the book to make the market more liquid 
+wht is spread ? 
+
+
+stack memory ?> 
+how it pops out ? 
+
+context switch ? 
+
+dormant stage ? 
+stack memory is faster ?
+
+sys call ? 
+
+
+design pattern : 
+
+new is always with pointer 
+
+
+
+NRVO 
+RVO 
+
+.cc
+.ccp 
+
+destructors get called? 
+
+
+
+removed endl aand used \n to minimum syscalls
+
+
+so without extension, the file became .md file 
+
+#include<iostream>
+<>() --> one off taLent

@@ -1,0 +1,64 @@
+custom protocol 
+
+network ? 
+
+what is NIC ? 
+system clock ? 
+synornization of clocks ?
+sync the clock through ethernet  --- it have 2 wire one for signal with for syncing 
+manchester coding. -- -one way to sync coding 
+NRZ coding -- another way to sync coding
+
+
+
+in HFT you will not use ethernet much 
+optical fiber -- you will use this more in HFT
+
+router -- send microwave signals, sending a wave from one antenna to another antenna
+amplify the signal with same frequency
+similary with antetnna binary data is sent
+
+framing -- ?
+adding some extra bits to identify start and end of data , delimiter
+HDLC framing -- high level data link control framing -- adding flag bits at start and end of data 
+ethernet framing -- adding preamble , start frame delimiter , mac address , ethertype , frame check sequence
+
+local networks --- 
+if u wanna send to one local connected machine to another 
+u will use mac address -- it's 6 byte address 
+it bounds to NIC 
+
+
+u can't know mac address of ec2 instance 
+
+what is IP -- 32 bits 
+
+below the oceans are IP lines ? 
+
+
+what is subnet mask ? 
+
+assumption : router always have suffix 1  and prefix ? 
+
+
+data sending through IP ? 
+
+
+subnet and IP relation ? 
+subnet is a part of IP address 
+subnet mask is used to identify subnet part and host part of IP address
+
+first 20 bits will be common for all machines in same router 
+if i want to send somehting to all machines in same subnet i can use broadcast address
+broadcast address -- all bits of host part are 1
+
+
+route table ? 
+how router know where to send packet ?
+each router have a route table 
+route table have entries like
+destination address , subnet mask , next hop address , interface
+example -- 
+
+
+lookup ip adress present in local route table  --- to send something outta local network

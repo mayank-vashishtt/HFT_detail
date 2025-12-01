@@ -1,0 +1,8 @@
+What are Sockets? (Deep Dive)
+
+A socket is an endpoint for sending or receiving data across a network. It acts as a virtual plug where two programs (possibly on different computers) connect and talk to each other using standard protocols (like TCP or UDP).
+Think of a socket like a phone jack—each side plugs in, and they can both send/receive messages as long as the connection lasts.
+
+In the context of HFT (High Frequency Trading), sockets let your trading systems connect to:
+Market data feeds from exchanges (to receive real-time price/volume/order updates).
+Order entry gateways (to send orders and receive confirmations).

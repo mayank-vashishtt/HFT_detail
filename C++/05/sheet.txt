@@ -1,0 +1,5 @@
+creating 1000 new nodes of linked list using Heap and run strace’ - 
+we will use this code as a reference to start with Memory Pool pattern today
+
+
+

@@ -1,0 +1,130 @@
+Bids and Asks – Deep Dive
+
+Bids and asks are the core data in every order book:
+Bid: The highest price a buyer is willing to pay for a stock right now. A standing offer to buy.
+Ask: The lowest price a seller is willing to accept. A standing offer to sell.
+
+The difference between the top bid and top ask is called the spread.
+
+How It Connects to Trading
+If you "buy at market": you get the best ask (you pay the lowest price someone is offering to sell).
+If you "sell at market": you get the best bid (you get the highest price someone is willing to pay).
+HFTs watch changes in bids/asks tick by tick to detect opportunity, liquidity, and imbalance in real time.
+
+
+Liquidity Detection
+Liquidity is how easily you can buy or sell without moving the price much.
+HFT bots scan the bid/ask volume at the top price levels to decide if they can enter or exit without causing a price swing.
+Example: If there are large bids, it’s easier to sell quickly; large asks mean easier to buy.
+
+
+Price Prediction and Imbalance
+If the order book suddenly fills with strong bids but few asks, it signals more buyers are aggressive—price may rise.
+HFT strategies watch for “imbalances” to predict very short-term price moves:
+They might place quick buy orders before prices move up.
+
+Market Making
+Some HFT bots provide liquidity: posting both bids and asks, capturing the spread when others trade against them.
+Constantly updating their prices and volumes as the order book moves.
+
+Arbitrage Bots
+As discussed, HFTs check bids and asks across multiple exchanges to find risk-free profit (arbitrage).
+
+---------------------------------------------------------------------------------------------------------------
+
+Matching Engine – Deep Dive
+The matching engine is the part of every exchange (like NSE/BSE) responsible for “matching” buy and sell orders so trades actually happen.
+It takes all bids (buy orders) and asks (sell orders), arranges them by price & time, and matches them by rules:
+
+It takes all bids (buy orders) and asks (sell orders), arranges them by price & time, and matches them by rules:
+Price priority: Highest bid with lowest ask.
+Time priority: If price matches, the oldest order goes first.
+
+
+How does a matching engine work?
+
+Incoming Order
+A new order arrives: “Buy 100 shares of XYZ at ₹100.05.”
+
+Book Comparison
+The engine compares this order against existing sell orders (“asks”).
+If the new buy price ≥ any existing sell price, it finds the lowest price seller.
+
+Execution
+If there is a match, trade occurs at the seller’s price.
+
+Update Order Book
+The matched orders’ quantities reduce accordingly.
+If either order runs out of shares, it vanishes from the book.
+
+Partial Fills
+If you want to buy 200 shares, but only 150 are available at best ask, you get a “partial fill”; the rest waits for more sellers.
+
+
+
+---------------------------------------------------------------------------------------------------------------
+What is NIFTY? (In-Depth)
+
+NIFTY (officially called the Nifty 50) is India’s major stock market index—like the “S&P 500” of India.
+Tracks the 50 largest and most actively traded companies listed on the National Stock Exchange (NSE).
+It covers many sectors: banking, IT, energy, FMCG, etc.
+Acts as a benchmark: Investors and traders look at how the NIFTY is moving to judge the “mood” of the entire Indian stock market.
+
+Why does NIFTY matter (even for HFT)?
+Liquidity: Stocks in the NIFTY are heavily traded—meaning lots of opportunities for fast buying/selling and less risk of moving the price.
+Derivatives: Many futures and options contracts in India are based on the NIFTY, making it central for hedging and speculating (a big focus of algorithmic trading).
+Market Barometer: HFT strategies sometimes monitor NIFTY price-moves to drive trades in related stocks (index arbitrage, basket trading, etc).
+
+
+NSE (National Stock Exchange)
+NSE is India’s largest stock exchange by volume and technology.
+It was established in 1992, based in Mumbai.
+Known for fully electronic trading (no physical trading floor).
+
+BSE (Bombay Stock Exchange)
+BSE is Asia’s oldest exchange—founded in 1875.
+Also based in Mumbai.
+Became electronic in the 1990s as well.
+
+
+Many companies are dual-listed—they trade simultaneously on both NSE and BSE.
+Example: Reliance, TCS, Infosys, etc.
+Prices are usually similar but can differ slightly due to micro-events and slight timing differences.
+
+How is Arbitrage possible?
+If one exchange’s price ticks up but the other hasn’t updated yet, a tiny arbitrage opportunity exists.
+HFT bots can buy on NSE (if cheaper) and sell on BSE (if price is higher)—or vice versa.
+This requires super-fast (millisecond) speed, network links, and robust code.
+
+
+---------------------------------------------------------------------------------------------------------------
+
+What is a “Fill” in the Market?
+A fill means an order (buy or sell) has been successfully executed—someone agreed to take your price and quantity, and the trade is now “done.”
+You have been “filled” on your order, either completely (full fill) or partially (partial fill)
+
+Types of Fill:
+Full fill: Your entire order is matched at your chosen price or better, in one go.
+Partial fill: Only part of your order is matched (maybe there weren’t enough on the other side). The leftover waits in the order book.
+
+---------------------------------------------------------------------------------------------------------------
+
+HFT, C++ and Latency — Why Does It Matter?
+
+Latency is the time delay between a market event happening (like a price change or order opportunity) and your trading system reacting to it (sending a buy/sell order).
+In HFT, latency is usually measured in microseconds (μs, millionths of a second) or nanoseconds.
+
+Why is Low Latency Critical for HFT?
+HFT profits mostly come from being the first to spot and act on market opportunities (arbitrage, spread, market making).
+If your system is even a microsecond slower than a competitor, you could miss trades, get “picked off”, or lose money.
+Competing HFTs are all trying to shave every possible microsecond—faster networks, fiber optics, better code.
+
+
+Why is C++ Preferred in HFT Environments?
+C++ is chosen because:
+
+It compiles directly to fast native machine code (no virtual machines or interpreters).
+Gives fine-grained control over memory and CPU (no unpredictable pauses).
+You can optimize for multi-core, parallelism, cache/thread locality.
+Libraries for fast networking (e.g., handling sockets) and data processing are more efficient in C++ than in managed languages.
+

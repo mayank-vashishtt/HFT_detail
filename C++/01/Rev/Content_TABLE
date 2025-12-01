@@ -1,0 +1,29 @@
+Defining HFT
+Arbitrage
+What is Order Book?
+Bids and Asks
+Matching engine (how orders get filled and executed)
+What is NIFTY?
+What is NSE and BSE & how is the same stock traded on both?
+What is “fill” in the market?
+HFT, C++ and latency (connection explained technically)
+Market data: bids and asks in practical feeds
+What are sockets?
+What is NIC?
+Socket connections to ports
+Market data frequency (update every millisecond)
+Dummy socket class, parsing string/million operations example
+How much time Java would take for such parsing
+What is bash shell script?
+C++ compile/run/generate assembly commands (g++)
+Why Java is slow in latency (JVM, garbage collector, etc.)
+FPGA in HFT (and why it’s preferred)
+Java garbage collector: how it works (mark sweep, ref counting)
+Context switches and unpredictable latency in Java
+Threads/multi-threading in Java
+Daemon thread in Java
+C++ doesn’t have garbage collector — implications
+super in Java (constructors, inheritance)
+Java vs C++ compilation (native vs JVM, platform independence)
+Vim, cat (quick reference)
+Java import collision (if two imports have the same function, how to distinguish)

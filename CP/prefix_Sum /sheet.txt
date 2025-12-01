@@ -1,0 +1,13 @@
+question 
+
+find answers to q queries on a static array a of size n 
+? L R
+
+
+find the sum of elements in the range L to R in the array 
+prefix sum is the way
+ 
+
++ L R X 
+add x to all the index in the range L to R 
+partial sum concept 
